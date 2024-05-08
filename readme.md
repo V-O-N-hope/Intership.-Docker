@@ -16,3 +16,7 @@ Task:
 
     * docker build -t my-php-app .
     * docker run -p 80:80 my-php-app
+
+Если все хорошо, то [тут](http://localhost:80) вас ждет запущенный сайт
+
+Ps: контейнер привязан к консоли
