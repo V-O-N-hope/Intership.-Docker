@@ -2,6 +2,8 @@ services:
 
   php:
     build: php
+    networks:
+      - inter
     ports:
       - 80:80
     volumes:
@@ -12,6 +14,8 @@ services:
 
   mysql:
     image: mysql:8.4
+    networks:
+      - inter
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: task_1
@@ -20,3 +24,7 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: false
     ports:
       - 3306:3306
+
+networks:
+  inter:
+    driver: bridge
