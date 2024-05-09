@@ -14,8 +14,8 @@ Task:
 Порядок выполнения: 
 Запуск команд:
 
-    * docker build -t my-php-app .
-    * docker run -p 80:80 my-php-app
+    docker build -t my-php .
+    docker run -p 80:80 my-php
 
 Если все хорошо, то [тут](http://localhost:80) вас ждет запущенный сайт
 
