@@ -1,0 +1,19 @@
+services:
+
+  php:
+    build: php
+    ports:
+      - 80:80
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: task_1
+      MYSQL_USER: task_1
+      MYSQL_PASSWORD: task_1
+      MYSQL_RANDOM_ROOT_PASSWORD: false
+    ports:
+      - 3306:3306
