@@ -4,6 +4,9 @@ services:
     build: php
     ports:
       - 80:80
+    volumes:
+      - ../public:/task3
+    working_dir: /task3
     depends_on:
       - mysql
 
